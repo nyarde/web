@@ -99,6 +99,7 @@ section {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    aspect-ratio: 2 / 3;
     transition: transform 0.15s, box-shadow 0.15s;
 }
 
@@ -110,7 +111,7 @@ section {
 .game-card img {
     display: block;
     width: 100%;
-    height: 180px;
+    height: 100%;
     object-fit: cover;
     background-color: var(--border-color);
 }
