@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Library</title>
+
+    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Game Library</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#library">Game Library</a></li>
+                <li><a href="#add-game">Add Game</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="theme-switcher">
+            <label for="theme-select">Theme Select</label>
+            <select id="theme-select">
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section id="library">
+            <h2>Library</h2>
+            <div id="game-list" class="game-grid">
+                <article class="game-card">
+                    <img src="assets/img/tein.png" alt="The End is Nigh">
+                    <h3>The End is Nigh</h3>
+                </article>
+                <article class="game-card">
+                    <img src="assets/img/tboi.png" alt="The Binding of Isaac: Repentance">
+                    <h3>The Binding of Isaac: Repentance</h3>
+                </article>
+                <article class="game-card">
+                    <img src="assets/img/ttyd.png" alt="Paper Mario: The Thousand Year Door">
+                    <h3>Paper Mario: The Thousand Year Door</h3>
+                </article>
+            </div>
+        </section>
+
+        <section id="add-game">
+            <h2>Add Game</h2>
+            <form id="add-game-form">
+                <label for="title-input">Title: </label>
+                <input type="text" id="title-input" placeholder="GTA VI">
+
+                <label for="img-input">Image: </label>
+                <input type="file" id="img-input" accept="image/*">
+
+                <button type="submit">Add Game</button>
+                <p id="form-error"></p>
+            </form>
+        </section>
+
+        <section id="about">
+            <h2>About this project</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; Test Game Library</p>
+    </footer>
+</body>
+</html>

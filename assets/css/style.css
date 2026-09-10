@@ -1,0 +1,174 @@
+/* ---------- Theme variables ---------- */
+:root {
+    --bg-color: #f5f5f7;
+    --text-color: #1a1a1a;
+    --card-bg: #ffffff;
+    --accent: #4f46e5;
+    --border-color: #ddd;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --card-bg: #1e1e1e;
+    --accent: #818cf8;
+    --border-color: #333;
+}
+
+/* ---------- Base (tag selectors) ---------- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* ---------- ID selector ---------- */
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+#header nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#header nav a:hover {
+    color: var(--accent);
+}
+
+#footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ---------- Class selectors ---------- */
+.theme-switcher select {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.3rem 0.5rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.game-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.game-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: var(--border-color);
+}
+
+.game-card h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0.6rem 0.8rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 0.95rem;
+    text-align: left;
+
+    /* hidden by default, slides up on hover */
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.game-card:hover h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#game-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 0.5rem;
+}
+
+#game-form input {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+#game-form button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#game-form button:hover {
+    opacity: 0.9;
+}
+
+.error {
+    color: #e11d48;
+    font-size: 0.9rem;
+    min-height: 1.2rem;
+}
